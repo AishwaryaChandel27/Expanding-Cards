@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@500&family=Open+Sans:wght@300;400;700;800&family=Raleway:wght@100&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    margin: 0;
+    align-items: center;
+    justify-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: cornsilk;
+}
+.container{
+    display: flex;
+    width: 90vw;
+}
+.panal{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+
+.panal h2{
+    font-size: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+.panal.active{
+    flex:  5;
+}
+
+.panal.active h2{
+    opacity: 1;
+}
+@media (max-width: 500px){
+    .container{
+        width: 100vw;
+    }
+    .panal  :nth-of-type(4),
+    .panal  :nth-of-type(5){
+        display: none;
+    }
+}
