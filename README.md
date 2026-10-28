@@ -1,47 +1,60 @@
-# Expanding-Cards
-# Expanding Card
+# Expanding Image Cards
 
-![Expanding Card Demo](demo.gif)
+A small browser interaction demo in which clicking a photographic panel expands it and reveals its title. The project demonstrates DOM event handling and CSS transitions without a framework.
 
-## Table of Contents
+## What it implements
 
-- [About](#about)
-- [Demo](#demo)
-- [Features](#features)
-- [Usage](#usage)
-- [Getting Started](#getting-started)
-  
-## About
+- Select one of five image panels.
+- Keep only the selected panel active.
+- Animate changes in panel width and title visibility.
 
-This project is a simple "Expanding Card" component that allows users to click on a card to reveal additional content or information. It's designed to be a user-friendly and interactive element that you can easily incorporate into your web projects.
+## How it works
 
-## Demo
+`project2/index.html` defines the panels, `index.css` styles their active and inactive states, and `index.js` switches the `active` class on click. Images are stored in `project2/images/`; there is no backend, database or build tool.
 
-You can view a live demo of the "Expanding Card" project [here](#) (insert your demo link if available).
+## Current limitations
 
-![Expanding Card Demo](demo.gif)
+The interaction is click-based; dedicated keyboard controls and accessibility tests are not implemented. The source uses the class name `panal` consistently. No automated tests or package manifest are present.
 
-## Features
+## Run locally
 
-- Smooth and visually appealing card expansion animations.
-- Responsive design suitable for various screen sizes.
-- Customizable for different content and styles.
+The commands below were checked against source paths and manifests; application startup was not tested unless explicitly stated.
+Use a browser and Python 3 for a local static server. No dependency installation is required.
+
+```bash
+git clone --branch main https://github.com/AishwaryaChandel27/Expanding-Cards.git
+cd Expanding-Cards
+python -m http.server 8000 --bind 127.0.0.1 --directory project2
+```
+Open `http://localhost:8000`.
 
 ## Usage
 
-You can use the "Expanding Card" component in your own web projects. Follow these steps:
+Open the page and click each card. Confirm that only one card remains expanded and inspect the CSS media query on a narrow viewport.
 
-1. Clone or download this repository.
+## Source map
 
-2. Include the necessary HTML, CSS, and JavaScript files in your project.
+| Path | Responsibility |
+| --- | --- |
+| [project2/index.html](project2/index.html) | Markup |
+| [project2/index.css](project2/index.css) | Layout and transitions |
+| [project2/index.js](project2/index.js) | Selection logic |
+| [project2/images](project2/images) | Local photographs |
 
-3. Review the documentation and examples to implement the expanding card feature.
+## Validation
 
-## Getting Started
+Documentation was checked against the repository snapshot on 28 October 2026. No application test suite was run for this repository. Provider availability, browser behavior, builds and deployment are unverified.
 
-To get started with this project, follow these steps:
+## Demo capture
 
-1. Clone the repository to your local machine:
+Suggested addition: a short recording of the usage workflow above, with synthetic inputs and visible limitations. No new screenshot or recording was produced in this audit.
 
-   ```shell
-   git clone https://github.com/AishwaryaChande27/expanding-card.git
+## Contributing
+
+Open an issue with reproduction steps or submit a focused pull request. Keep prototype behavior and future plans clearly distinguished, and include verification steps for changes.
+
+## License
+
+No license file was found. A manifest or older README license label does not replace an explicit license grant.
+
+Maintained in [AishwaryaChandel27’s repositories](https://github.com/AishwaryaChandel27).
